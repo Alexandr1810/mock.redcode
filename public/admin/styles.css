@@ -234,7 +234,7 @@ td.actions {
   width: min(380px, 100%);
   padding: 28px 24px 24px;
   background: var(--panel);
-  border: 1px solid var(--line);
+  box-shadow: rgb(241 239 239) 0px 1px 20px 10px;
   border-radius: 10px;
 }
 
