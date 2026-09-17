@@ -1,0 +1,331 @@
+/* Админка: тёплая тёмная тема, системные шрифты, без сборки. */
+
+:root {
+    --bg: #f9f9f9;
+    --panel: #ffffff;
+    --panel-2: #3d3d3d;
+    --line: #9c9388;
+    --text: #3d3d3d;
+    --muted: #6c6c6c;
+    --accent: #3d3d3d;
+    --accent-ink: #ffffff;
+    --danger: #c40f15;
+    --danger-bg: #f0c969a6;
+    --focus: #6c6c6c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font: 15px/1.45 system-ui, "Segoe UI", sans-serif;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+code,
+.mono {
+  font-family: ui-monospace, "Cascadia Code", Consolas, monospace;
+  font-size: 0.92em;
+}
+
+#app {
+  max-width: 90vw;
+  margin: 0 auto;
+  padding: 24px 20px 64px;
+}
+
+body.is-login #app {
+  max-width: none;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 28px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--line);
+}
+
+.panel {
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.crumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  color: var(--text);
+  font-size: 14px;    
+  font-weight: 600;
+}
+
+.crumbs a {
+  color: var(--muted);
+}
+
+.top-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.muted-note {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.flash {
+  margin: 0 0 16px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  background: var(--danger-bg);
+  color: #3d3d3d;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+h1 {
+  margin: 0 0 4px;
+  font-size: 24px;
+  font-weight: 650;
+}
+
+.sub {
+  margin: 0 0 20px;
+  color: var(--muted);
+}
+
+button,
+.btn {
+  appearance: none;
+  border: 1px solid var(--line);
+  background: var(--panel-2);
+  color: var(--accent-ink);
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font: inherit;
+}
+
+button:hover,
+.btn:hover {
+  border-color: var(--accent);
+}
+
+button.primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-ink);
+  font-weight: 600;
+}
+
+button.danger {
+  color: var(--danger);
+  border-color: #6a332c;
+}
+
+button.linkish {
+  background: none;
+  border: none;
+  padding: 0 4px;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+button.linkish.danger, span.danger {
+  color: var(--danger);
+}
+
+button:focus-visible,
+a:focus-visible,
+textarea:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+.brand{
+  font-size: 20px;
+  font-weight: 500;
+}
+.table-wrap {
+    overflow-x: auto;
+    /* border: 1px solid var(--line); */
+    border-radius: 8px;
+    background: var(--panel);
+    box-shadow: rgb(241 239 239) 0px 1px 20px 10px;
+
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 3px solid var(--bg);
+    vertical-align: top;
+    color: var(--text);
+
+}
+
+th {
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--accent-ink);
+  background: var(--panel-2);
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+td.actions {
+  white-space: nowrap;
+  width: 1%;
+}
+
+.empty {
+  padding: 32px 16px;
+  text-align: center;
+  color: var(--muted);
+}
+
+.login {
+  width: min(380px, 100%);
+  padding: 28px 24px 24px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+
+.login h1 {
+  color: var(--text);
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.login .primary {
+  width: 100%;
+  margin-top: 8px;
+}
+
+.login .modal-actions {
+  justify-content: stretch;
+  margin-top: 18px;
+}
+
+label {
+  display: block;
+  margin: 12px 0 6px;
+  color: var(--text);
+  font-size: 13px;
+}
+
+input,
+textarea {
+  width: 100%;
+  background: var(--panel-2);
+  color: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 8px 10px;
+  font: inherit;
+}
+
+input{
+  background: var(--panel);
+  color: var(--text);
+}
+
+textarea {
+  min-height: 220px;
+  font-family: ui-monospace, "Cascadia Code", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.5;
+  resize: vertical;
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(8, 6, 4, 0.72);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2vh 16px;
+  z-index: 10;
+}
+
+.modal {
+  width: min(640px, 100%);
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+textarea.tall {
+  min-height: 360px;
+}
+
+.modal.wide {
+  width: min(820px, 100%);
+}
+
+.modal h2 {
+  margin: 0 0 12px;
+  font-size: 18px;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  margin-top: 16px;
+}
+
+.hint {
+  margin-top: 6px;
+  font-size: 12px;
+  color: var(--muted);
+}
