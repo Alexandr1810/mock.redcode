@@ -127,9 +127,12 @@ function renderHeader(crumbs) {
   }
   return `
     <div class="top">
-      <div>
-        <div class="brand"><span class="danger">M</span>OCK.<span class="danger">R</span>EDCODE</div>
-        <nav class="crumbs">${crumbs}</nav>
+      <div class="right">
+        <img src="/admin/rc.svg" class="login-form-logo">
+        <div>
+          <div class="brand"><span class="danger">M</span>OCK.<a href="https://site.redcode24.ru"><span class="danger">R</span>EDCODE</a></div>
+          <nav class="crumbs">${crumbs}</nav>
+        </div>
       </div>
       <div class="top-actions">${right}</div>
     </div>
@@ -142,7 +145,10 @@ function renderLogin(error) {
   document.body.classList.add('is-login');
   root.innerHTML = `
     <form class="login" id="login-form">
-      <h1>Вход</h1>
+      <div class="login-form-top">
+        <img src="/admin/rc.svg" class="login-form-logo">
+        <h1>Авторизация</h1>
+      </div>
       ${error ? `<p class="flash">${escapeHtml(error)}</p>` : ''}
       <label for="pass">Пароль</label>
       <input id="pass" name="password" type="password" autocomplete="current-password" autofocus />

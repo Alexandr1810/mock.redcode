@@ -1,4 +1,4 @@
-# mockapi-clone
+# mock.redcode
 
 Self-hosted JSON API: замена публичного контракта [mockapi.io](https://mockapi.io) для наших проектов.
 
@@ -8,8 +8,6 @@ Self-hosted JSON API: замена публичного контракта [mock
 https://TOKEN.mockapi.io/tasks
 → https://mock.your.domain/TOKEN/tasks
 ```
-
-ТЗ: [`TZ_mockapi_clone.md`](./TZ_mockapi_clone.md).
 
 ## Что умеет
 

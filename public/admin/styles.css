@@ -62,14 +62,18 @@ body.is-login #app {
 .top {
   display: flex;
   flex-wrap: wrap;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-between;
-  gap: 12px;
   margin-bottom: 28px;
-  padding-bottom: 16px;
+  padding-bottom: 15px;
   border-bottom: 1px solid var(--line);
 }
+.top .right{
+  display: flex;
+  align-items: center;
+  gap: 15px;
 
+}
 .panel {
   font-size: 13px;
   letter-spacing: 0.08em;
@@ -237,7 +241,17 @@ td.actions {
   box-shadow: rgb(241 239 239) 0px 1px 20px 10px;
   border-radius: 10px;
 }
-
+.login-form-top{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  padding-left: 10px;
+}
+.login-form-logo{
+  height: 40px;
+}
 .login h1 {
   color: var(--text);
   font-size: 22px;

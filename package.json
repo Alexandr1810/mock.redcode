@@ -1,6 +1,6 @@
 {
-  "name": "mockapi-clone",
-  "version": "0.1.0",
+  "name": "mock.redcode",
+  "version": "1.0.0",
   "description": "Self-hosted drop-in replacement for mockapi.io public REST contract",
   "main": "src/server.js",
   "type": "commonjs",
